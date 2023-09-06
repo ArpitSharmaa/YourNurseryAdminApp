@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragnav"
+    app:startDestination="@id/loginFrag">
+
+    <fragment
+        android:id="@+id/addproducts"
+        android:name="com.example.YournurseryAdmin.addproducts"
+        android:label="fragment_addproducts"
+        tools:layout="@layout/fragment_addproducts" >
+        <action
+            android:id="@+id/action_addproducts_to_orders"
+            app:destination="@id/orders" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.YournurseryAdmin.LoginFrag"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFrag_to_addproducts"
+            app:destination="@id/addproducts" />
+        <action
+            android:id="@+id/action_loginFrag_to_register2"
+            app:destination="@id/register2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register2"
+        android:name="com.example.YournurseryAdmin.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register2_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/orders"
+        android:name="com.example.YournurseryAdmin.Orders"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+</navigation>
